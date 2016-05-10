@@ -1,0 +1,56 @@
+{
+    "name": "bengoruser/doctrine-orm-bridge-bundle",
+    "description": "Symfony bundle that glues UserBundle and DoctrineORMBridge",
+    "keywords": ["user", "bundle", "symfony", "doctrine", "orm", "ddd"],
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Beñat Espiña Diaz",
+            "email": "benatespina@gmail.com",
+            "homepage": "http://benatespina.com"
+        },
+        {
+            "name": "Gorka Laucirica Ibarra",
+            "email": "gorka.lauzirika@gmail.com",
+            "homepage": "http://gorkalaucirica.net"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/BenGorUser/UserBundle"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/BenGorUser/DoctrineORMBridge"
+        }
+    ],
+    "require": {
+        "php": "^5.5 || ^7.0",
+        "bengoruser/user-bundle": "dev-master",
+        "bengoruser/doctrine-orm-bridge": "dev-master"
+    },
+    "require-dev": {
+        "fabpot/php-cs-fixer": "^1.11",
+        "phpspec/phpspec": "^2.5"
+    },
+    "scripts": {
+        "cs": [
+            "php-cs-fixer fix --config-file=.php_cs",
+            "php-cs-fixer fix --config-file=.phpspec_cs"
+        ],
+        "test": "phpspec run"
+    },
+    "autoload": {
+        "psr-4": {
+            "BenGorUser\\DoctrineORMBridgeBundle\\": "src/BenGorUser/DoctrineORMBridgeBundle/"
+        },
+        "exclude-from-classmap": ["/spec/"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
