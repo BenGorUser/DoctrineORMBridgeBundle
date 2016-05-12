@@ -24,8 +24,8 @@
     ],
     "require": {
         "php": "^5.5 || ^7.0",
-        "bengoruser/user-bundle": "0.6.x-dev",
-        "bengoruser/doctrine-orm-bridge": "dev-master"
+        "bengor-user/user-bundle": "0.6.x-dev",
+        "bengor-user/doctrine-orm-bridge": "dev-master"
     },
     "require-dev": {
         "fabpot/php-cs-fixer": "^1.11",
