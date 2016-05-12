@@ -1,5 +1,5 @@
 {
-    "name": "bengoruser/doctrine-orm-bridge-bundle",
+    "name": "bengor-user/doctrine-orm-bridge-bundle",
     "description": "Symfony bundle that glues UserBundle and DoctrineORMBridge",
     "keywords": ["user", "bundle", "symfony", "doctrine", "orm", "ddd"],
     "license": "MIT",
@@ -19,16 +19,12 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/BenGorUser/UserBundle"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/BenGorUser/DoctrineORMBridge"
         }
     ],
     "require": {
         "php": "^5.5 || ^7.0",
-        "bengoruser/user-bundle": "dev-master",
+        "bengoruser/user-bundle": "0.6.x-dev",
         "bengoruser/doctrine-orm-bridge": "dev-master"
     },
     "require-dev": {
