@@ -14,7 +14,7 @@ namespace BenGorUser\DoctrineORMBridgeBundle;
 
 use BenGorUser\DoctrineORMBridgeBundle\DependencyInjection\Compiler\DoctrineORMCustomTypesPass;
 use BenGorUser\DoctrineORMBridgeBundle\DependencyInjection\Compiler\DoctrineORMServicesPass;
-use BenGorUser\UserBundle\DependentBengorUserBundle;
+use BenGorUser\UserBundle\DependentBenGorUserBundle;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -26,7 +26,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class DoctrineORMBridgeBundle extends Bundle
 {
-    use DependentBengorUserBundle;
+    use DependentBenGorUserBundle;
 
     /**
      * {@inheritdoc}
