@@ -42,10 +42,10 @@ class DoctrineORMBridgeBundle extends Bundle
         $container->loadFromExtension('doctrine', [
             'orm' => [
                 'mappings' => [
-                    'BenGorUserBundle' => [
+                    'DoctrineORMBridgeBundle' => [
                         'type'      => 'yml',
                         'is_bundle' => true,
-                        'prefix'    => 'BenGor\\User\\Domain\\Model',
+                        'prefix'    => 'BenGorUser\\User\\Domain\\Model',
                     ],
                 ],
             ],
