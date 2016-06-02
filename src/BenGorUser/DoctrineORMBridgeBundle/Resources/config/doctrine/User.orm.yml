@@ -21,6 +21,9 @@ BenGorUser\User\Domain\Model\User:
         email:
             class: BenGorUser\User\Domain\Model\UserEmail
             columnPrefix: false
+        invitationToken:
+            class: BenGorUser\User\Domain\Model\UserToken
+            columnPrefix: invitation_
         password:
             class: BenGorUser\User\Domain\Model\UserPassword
             columnPrefix: false
