@@ -12,7 +12,6 @@
 
 namespace BenGorUser\DoctrineORMBridgeBundle\DependencyInjection\Compiler;
 
-use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\DoctrineORMUserGuestRepository;
 use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\DoctrineORMUserRepository;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -40,11 +39,6 @@ class DoctrineORMServicesPass implements CompilerPassInterface
                 continue;
             }
 
-            $guestClass = null;
-            if (class_exists($user['class'] . 'Guest')) {
-                $guestClass = $user['class'] . 'Guest';
-            }
-
             $container->setDefinition(
                 'bengor.user.infrastructure.persistence.' . $key . '_repository',
                 (new Definition(
@@ -59,23 +53,6 @@ class DoctrineORMServicesPass implements CompilerPassInterface
                 'bengor_user.' . $key . '_repository',
                 'bengor.user.infrastructure.persistence.' . $key . '_repository'
             );
-
-            if (null !== $guestClass) {
-                $container->setDefinition(
-                    'bengor.user.infrastructure.persistence.' . $key . '_guest_repository',
-                    (new Definition(
-                        DoctrineORMUserGuestRepository::class, [
-                            $guestClass,
-                        ]
-                    ))->setFactory([
-                        new Reference('doctrine.orm.default_entity_manager'), 'getRepository',
-                    ])->setPublic(false)
-                );
-                $container->setAlias(
-                    'bengor_user.' . $key . '_guest_repository',
-                    'bengor.user.infrastructure.persistence.' . $key . '_guest_repository'
-                );
-            }
         }
     }
 }
