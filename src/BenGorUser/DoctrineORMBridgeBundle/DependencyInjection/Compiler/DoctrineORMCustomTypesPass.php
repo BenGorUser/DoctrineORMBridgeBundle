@@ -12,7 +12,6 @@
 
 namespace BenGorUser\DoctrineORMBridgeBundle\DependencyInjection\Compiler;
 
-use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserGuestIdType;
 use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserIdType;
 use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserRolesType;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
@@ -36,15 +35,11 @@ class DoctrineORMCustomTypesPass implements CompilerPassInterface
 
         $customTypes = $container->getParameter('doctrine.dbal.connection_factory.types');
         $customTypes = array_merge($customTypes, [
-            'user_id'       => [
+            'user_id'    => [
                 'class'     => UserIdType::class,
                 'commented' => true,
             ],
-            'user_guest_id' => [
-                'class'     => UserGuestIdType::class,
-                'commented' => true,
-            ],
-            'user_roles'    => [
+            'user_roles' => [
                 'class'     => UserRolesType::class,
                 'commented' => true,
             ],
