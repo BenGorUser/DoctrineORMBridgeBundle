@@ -29,10 +29,6 @@ class DoctrineORMCustomTypesPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        if (!$container->hasDefinition('doctrine.dbal.connection_factory')) {
-            return;
-        }
-
         $customTypes = $container->getParameter('doctrine.dbal.connection_factory.types');
         $customTypes = array_merge($customTypes, [
             'user_id'    => [

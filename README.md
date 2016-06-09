@@ -17,9 +17,7 @@ $ composer require bengor-user/doctrine-orm-bridge-bundle
 ```
 
 ##Documentation
-All the documentation is stored in the `docs` folder.
-
-[Show me the docs!](docs/index.md)
+All the documentation is stored inside the [user bundle](https://github.com/BenGorUser/UserBundle/blob/master/docs/index.md).
 
 ##Tests
 This library is completely tested by **[PHPSpec][1], SpecBDD framework for PHP**.
