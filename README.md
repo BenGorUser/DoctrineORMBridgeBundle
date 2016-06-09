@@ -8,7 +8,8 @@
 [![Latest Unstable Version](https://poser.pugx.org/bengor-user/doctrine-orm-bridge-bundle/v/unstable.svg)](https://packagist.org/packages/bengor-user/doctrine-orm-bridge-bundle/)
 
 ##Requirements
-PHP >= 5.5
+PHP >= 5.5</br>
+Symfony >= 2.8 
 
 ##Installation
 The easiest way to install this component is using [Composer][6]
@@ -20,7 +21,7 @@ $ composer require bengor-user/doctrine-orm-bridge-bundle
 All the documentation is stored inside the [user bundle](https://github.com/BenGorUser/UserBundle/blob/master/docs/index.md).
 
 ##Tests
-This library is completely tested by **[PHPSpec][1], SpecBDD framework for PHP**.
+This bundle is completely tested by **[PHPSpec][1], SpecBDD framework for PHP**.
 
 Run the following command to launch tests:
 ```bash
