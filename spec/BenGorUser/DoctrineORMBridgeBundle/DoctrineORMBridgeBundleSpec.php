@@ -18,6 +18,7 @@ use BenGorUser\DoctrineORMBridgeBundle\DoctrineORMBridgeBundle;
 use PhpSpec\ObjectBehavior;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
@@ -35,6 +36,11 @@ class DoctrineORMBridgeBundleSpec extends ObjectBehavior
     function it_extends_symfony_bundle()
     {
         $this->shouldHaveType(Bundle::class);
+    }
+
+    function it_builds_without_dependendent_bundles_enabled(ContainerBuilder $container)
+    {
+        $this->shouldThrow(RuntimeException::class)->duringBuild($container);
     }
 
     function it_builds(ContainerBuilder $container)
