@@ -201,7 +201,7 @@ class DoctrineORMServicesPassSpec extends ObjectBehavior
         )->shouldBeCalled()->willReturn($definition);
 
         $container->setAlias(
-            'bengor_user.user_repository',
+            'bengor_user.user.repository',
             'bengor.user.infrastructure.persistence.user_repository'
         )->shouldBeCalled();
 

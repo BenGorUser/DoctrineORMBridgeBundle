@@ -50,7 +50,7 @@ class DoctrineORMServicesPass implements CompilerPassInterface
                 ])->setPublic(false)
             );
             $container->setAlias(
-                'bengor_user.' . $key . '_repository',
+                'bengor_user.' . $key . '.repository',
                 'bengor.user.infrastructure.persistence.' . $key . '_repository'
             );
         }
