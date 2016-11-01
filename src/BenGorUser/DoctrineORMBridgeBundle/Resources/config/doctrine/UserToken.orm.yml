@@ -13,3 +13,7 @@ BenGorUser\User\Domain\Model\UserToken:
             type: string
             length: 36
             nullable: true
+        createdOn:
+            type: datetime
+            column: created_on
+            nullable: true
